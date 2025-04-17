@@ -5,6 +5,9 @@ import cors from "cors";
 import UserRoutes from "./Kambaz/Users/routes.js";
 import CourseRoutes from "./Kambaz/Courses/routes.js";
 import ModuleRoutes from "./Kambaz/Modules/routes.js";
+import QuizRoutes from './Kambaz/Quizzes/routes.js';
+import QuestionRoutes from './Kambaz/Questions/routes.js';
+import AnswerRoutes from './Kambaz/Answers/routes.js';
 import session from "express-session";
 import "dotenv/config";
 import mongoose from "mongoose";
@@ -36,6 +39,9 @@ app.use(express.json());
 UserRoutes(app);
 CourseRoutes(app);
 ModuleRoutes(app);
+QuizRoutes(app);
+QuestionRoutes(app);
+AnswerRoutes(app);
 Lab5(app)
 Hello(app)
 app.listen(process.env.PORT || 4000)
